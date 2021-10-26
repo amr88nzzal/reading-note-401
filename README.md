@@ -1,4 +1,4 @@
-# Reading Notes..
+# Reading Notes.
 
 **This Repo will contain my reading notes for ASAC course.**
 **You can click on each course to get the Repo for it**
@@ -12,4 +12,4 @@
 
 | Class     |    Repo Link     |   Github Page Link  |
 | :---:     | :--------------: | :-----------------: |
-| Class1    |     [Class-01](https://github.com/amr88nzzal/reading-notes-401/blob/main/class01.md) |     [Class-01](https://amr88nzzal.github.io/reading-notes-401/class01)    |
+| Class1    |     [Class-01](https://github.com/amr88nzzal/reading-note-401/blob/main/class01.md) |     [Class-01](https://amr88nzzal.github.io/reading-notes-401/class01)    |
