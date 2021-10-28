@@ -10,6 +10,6 @@
 
 -------
 
-| Class     |    Repo Link     |   Github Page Link  |
-| :---:     | :--------------: | :-----------------: |
-| Class1    |     [Class-01](https://github.com/amr88nzzal/reading-note-401/blob/main/class01.md) |     [Class-01](https://amr88nzzal.github.io/reading-notes-401/class01)    |
+| Class      |    Repo Link     |   Github Page Link  |
+| :----:     | :--------------: | :-----------------: |
+| Class00    |     [Class-01](https://github.com/amr88nzzal/reading-note-401/blob/main/class00.md) |     [Class-01](https://amr88nzzal.github.io/reading-notes-401/class00)    |
