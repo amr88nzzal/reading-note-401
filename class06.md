@@ -1,71 +1,55 @@
 # Authentication
 
-## 1. What is the “Singleton” is (in Computer Science terms)? 
+## Review, Research, and Discussion
 
-In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system. The term comes from the mathematical concept of a singleton.
+* Explain what a “Singleton” is?
+  * the singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
 
+![01](./pic/c06-01.png)
 
-## 2. how the Singleton pattern can be used with Node modules, specifically with classes?
+* Explain how the Singleton pattern can be used with Node modules, specifically with classes
+  * Singleton is used by creating a ES6 class.
+  * to make sure that you have one and only one instance of an object.
+  * A singleton represents a single instance of an object.
 
-   ```
-   class PrivateSingleton {
-       constructor() {
-           this.message = 'I am an instance';
-       }
-   }
-
-   class Singleton {
-       constructor() {
-           throw new Error('Use Singleton.getInstance()');
-       }
-   }
-
-   static getInstance() {
-       if(!Singleton.instance) {
-           singleton.instance = new PrivateSingleton();
-       }
-       return Singleton.instance;
-   }
-
-   module.exports SingleTon.instance;
-
-   ```
-## 3. If you were tasked with building a middleware system like Express uses, what approach might you take to construct/operate it?
-#### Layers approach.
-
+* If you were tasked with building a middleware system like Express uses, what approach might you take to construct/operate it?
+* to use the singleton approach.
 
 ## Vocabulary Terms
 
-|          Term        |                                                                                                                             Definition **                                                                                                                              |
-| :-------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|      Router Middleware      |                                                                                                           function hand off the control to the next callback.                                                                                                            |
-|   Dynamic Module Loading    | mechanism by which a computer program can, at run time, load a library (or other binary) into memory, retrieve the addresses of functions and variables contained in the library, execute those functions or access those variables, and unload the library from memory. |
-|      Singleton Pattern      |                                          software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system                                          |
-| CRUD -> REST Method Matches |                                                                Create = PUT with a new URI POST to a base URI returning a newly created URI Read = GET Update = PUT with an existing URI Delete = DELETE                                                                 |
-|        Mock Testing         |                                                             Mock testing is an approach to unit testing that lets you make assertions about how the code under test is interacting with other system modules.
+### Router Middleware :
 
+* Routing refers to how an application’s endpoints (URIs) respond to client requests. For an introduction to routing, see Basic routing. 
 
-## Preparation Materials
+### Dynamic Module Loading:
 
-#### Securing Passwords
+* is a mechanism by which a computer program can, at run time, load a library (or other binary) into memory, retrieve the addresses of functions and variables contained in the library, execute those functions or access those variables, and unload the library from memory .
+  
+### Singleton Pattern :
 
-1- Passwords: minimum length of 8 characters, common maximum length is 64 characters
+* the singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
+  
+### CRUD -> REST Method Matches :
 
-2-Transmit passwords only over TLS (transport layer protection) or other strong transport
+* (Create, Read, Update, Delete) is an acronym for ways one can operate on stored data.
 
-3-Require re-authentication for sensitive features
+![01](./pic/c06-02.png)
 
-4-Account lockout: prevent any more login attempts after a series of failed logins
+### Mock Testing :
 
-#### Basic Auth 
+* it is mocking real test to test the program like a fack data. 
 
-basic access authentication is a method for an HTTP user agent (e.g. a web browser) to provide a user name and password when making a request. In basic HTTP authentication, a request contains a header field in the form of Authorization: Basic <credentials>, where credentials is the Base64 encoding of ID and password joined by a single colon :.
+## Securing Passwords with Bcrypt Hashing Function 
 
-* Server side : 
-When the server wants the user agent to authenticate itself towards the server, the server must respond appropriately to unauthenticated requests.
+* Passwords are the first line of defense against cyber criminals.
 
-To unauthenticated requests, the server should return a response which contains a HTTP 401 Unauthorized status line[5] and a WWW-Authenticate header field.
+* Cryptographic hash algorithms MD5, SHA1, SHA256, SHA512, SHA-3 are general purpose hash functions, designed to calculate a digest of huge amounts of data in as short a time as possible. 
+* The benefit of hashing is that if someone steals the database with hashed passwords, they only make off with the hashes and not the actual plaintext passwords. 
 
-* Client side: 
+![01](./pic/c06-03.jpg)
 
-When the user agent wants to send authentication credentials to the server, it may use the Authorization header field.
+# Basic access authentication
+
+* is a method for an HTTP user agent (e.g. a web browser) to provide a user name and password when making a request. 
+
+![01](./pic/c06-04.gif)

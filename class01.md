@@ -47,8 +47,8 @@ let cityName =async(name)=>{
 
 ![img](pic/c01-02.jpeg)
 
-
 ## 5. Are all callback functions considered to be Asynchronous? Why or Why Not?
 
 ### callbacks don't have anything to do with the async concept at all.
+
 ### They're just regular functions, and they don't know or care whether they're going to be called asynchronously or not.
