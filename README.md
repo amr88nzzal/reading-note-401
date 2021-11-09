@@ -20,3 +20,4 @@
 | class05    |     [Class-05](https://github.com/amr88nzzal/reading-note-401/blob/main/class05.md) |     [Class-05](https://amr88nzzal.github.io/reading-note-401/class05)
 | class06    |     [Class-06](https://github.com/amr88nzzal/reading-note-401/blob/main/class06.md) |     [Class-06](https://amr88nzzal.github.io/reading-note-401/class06)
 | class07    |     [Class-07](https://github.com/amr88nzzal/reading-note-401/blob/main/class07.md) |     [Class-07](https://amr88nzzal.github.io/reading-note-401/class07)
+| class08    |     [Class-08](https://github.com/amr88nzzal/reading-note-401/blob/main/class08.md) |     [Class-08](https://amr88nzzal.github.io/reading-note-401/class08)
