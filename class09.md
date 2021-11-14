@@ -1,38 +1,26 @@
-# OAuth
-## What is OAuth:
+# Authorization/Authentication
 
-![img](./pic/09-01.png)
+****
 
-* An open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.
-* OAuth doesn't share password data but instead uses authorization tokens to prove an identity between consumers and service providers.
+**What header(s) are used in authentication and authorization**
 
-## OAuth Examples
+-The WWW-Authenticate and Proxy-Authenticate response headers define the authentication method that should be used to gain access to a resource. They must specify which authentication scheme is used, so that the client that wishes to authorize knows how to provide the credentials
 
-* The simplest example of OAuth in action is one website saying “hey, do you want to log into our website with other website’s login?”
-![img](./pic/09-02.png)
+**What is safe to put into a JWT**
 
+- JWS payload : contains verifiable security statements, like the identity of the user.
+- JWS signature: used to validate that the token is trustworthy and original.
 
+**How are JWTs validated**
 
-## The most common OAuth 2.0 grant types are listed below.
-* Authorization Code
-* Implicit
-* Password
-* Client Credentials
-* Device Code
-* Refresh Token
+- Check signature. which is used to verify that the token was signed by the sender and not altered in any way.
 
-## How OAuth Works?
+****
 
-![img](./pic/09-03.png)
+## Document the following Vocabulary Terms
 
+- **RBAC**: Role-based access control (RBAC) is a popular mechanism to enforce authorization in applications. When using RBAC, an application developer defines roles rather than authorizing individual users or groups.
 
-## Advantages  of OAuth 2.0
-* is a very flexible protocol .
+- **User Roles**: It is the permissions that manage resources and what users can do with those resources.
 
-* OAuth 2.0 relies on SSL which is used to ensure cryptography industry protocols and are being used to keep the data safe.
-
-* It allows limited access to the user's data and allows accessing when authorization tokens expire.
-
-* It has ability to share data for users without having to release personal information.
-
-* It is easier to implement and provides stronger authentication.
+- **JWT Token**: It is the authentication signature which is issued by JWT by passing the pay load and a secret to add more security and keep the user logged in while routes are refreshing.
