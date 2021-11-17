@@ -26,3 +26,4 @@
 | class11    |     [Class-11](https://github.com/amr88nzzal/reading-note-401/blob/main/class11.md) |     [Class-11](https://amr88nzzal.github.io/reading-note-401/class11)
 | class12    |     [Class-12](https://github.com/amr88nzzal/reading-note-401/blob/main/class12.md) |     [Class-12](https://amr88nzzal.github.io/reading-note-401/class12)
 | class13    |     [Class-13](https://github.com/amr88nzzal/reading-note-401/blob/main/class13.md) |     [Class-13](https://amr88nzzal.github.io/reading-note-401/class13)
+| class14    |     [Class-14](https://github.com/amr88nzzal/reading-note-401/blob/main/class14.md) |     [Class-14](https://amr88nzzal.github.io/reading-note-401/class14)
