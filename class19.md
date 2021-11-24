@@ -39,7 +39,7 @@ Systems of record, supply chain, registrations, banking transactions
 ### 3. What’s the difference between a FIFO and a standard queue?
 - Standard queues guarantee that a message is delivered at least once and duplicates can be introduced into the queue. 
 - FIFO queues ensure a message is delivered exactly once and remains available until a consumer processes and deletes it; duplicates are not introduced into the queue.
-![](./assets/QueueTypes.jpg)
+
 
 ### 4. How can the server be assured a message was properly received?
 
