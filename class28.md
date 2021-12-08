@@ -1,13 +1,24 @@
-# Advanced State with Reducers
+# Component Lifecycle / useEffect() Hook
 
-### 1. How can we ensure that an effect hook runs only once?
-if you provide an empty array or nothing, the useEffect will only execute once, similar to how componentDidMount works.
+### 1. Why do we not need more .html pages in a multi-page React app?
+because the React app consists of a single HTML file index. html . The views are coded in JSX format as components. But we sometimes need to build multi-page websites because a single-page website can not always represent complete information.
 
-### 2. Can useState() update more than one state variable at the same time?
-We could do one setState call and there will only be one render. Unlike the setState in class components, the setState returned from useState doesn’t merge objects with existing state, it replaces the object entirely.
+***
 
-### 3. Is useState() synchronous?
-Both useState and setState are asynchronous operations. The useState and setState methods do not return promises, despite the fact that they are asynchronous. As a result, we can't utilize async/await to obtain the updated state values or attach a then handler to it.
+### 2. If we wanted a component to show up on every page, where would we put it and why?
+  * Inside a <Route /> : because React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+***
+
+
+### 3. What does routing do with the components that were rendered when a new route is requested
+React Router uses component structure to call components, which display the appropriate information. By preventing a page refresh, and using Router or Link, the flash of a white screen or blank page is prevented. This is one increasingly common way of having a more seamless user experience. React router also allows the user to utilize browser functionality like the back button and the refresh page while maintaining the correct view of the application.
+***
+### 4. What does props.children contain?
+props .children represents the content between the opening and the closing tags when invoking/rendering a component. can have one element, multiple elements, or none at all, its value is respectively a single child node, an array of child nodes or undefined.
+***
+### 5. How do useState() and this.setState() differ?
+
+setState is merging the previous state with the new one, it means that you dont have to pass the full state object every time you want to change some part of the state. React will update given properties and won’t touch the rest. The useState’s updater rewrites a previous state with a new one and it does not perform any merging. Its just replacement instead of merging.
 
 *** 
 ##  Vocabulary Terms :
@@ -15,31 +26,28 @@ Both useState and setState are asynchronous operations. The useState and setStat
 | Term      | Definition                                                                                                 |
 | --------- | ---------------------------------------------------------------------------------------------------------------|
 | State Hook|A special function that lets you “hook into” React features. For example, useState is a Hook that lets you add React state to function components.|
-| Component Lifecycle|  Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component's existence. ... Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.|
+| Mounting and Un-Mounting|The main job of React is to figure out how to modify the DOM to match what the components want to be rendered on the screen. React does so by mounting (adding nodes to the DOM), unmounting (removing them from the DOM), and updating (making changes to nodes already in the DOM).   |
 *** 
 ## Preparation Materials: 
-#### How does useReducer work? 
-* useReducer is used to store and update states, just like the useState Hook. It accepts a reducer function as its first parameter and the initial state as the second.
 
-* useReducer is one of the additional Hooks that shipped with React 16.8. An alternative to the useState Hook, it helps you manage complex state logic in React applications. When combined with other Hooks like useContext, useReducer can be a good alternative to Redux or MobX — indeed, it can sometimes be an outright better option.
+ 
+### Using the Effect Hook
 
-* There are three main building blocks in Redux:
-   * A store — an immutable object that holds the applications state data
-   * A reducer — a function that returns some state data, triggered by an action type.
-   * An action — an object that tells the reducer how to change the state. It must contain a type property, and it can contain an optional payload property
-const initialState = { count: 0 }
+* The Effect Hook lets you perform side effects in function components, Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects.
 
-* const [state, dispatch] = useReducer(reducer, initialState)
-The reduce() method in JavaScript executes a reducer function on each element of the array an and then returns a single value.
+* useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
 
-* There are two different ways to initialize the useReducer state.
+* In React class components, the render method itself shouldn’t cause side effects. It would be too early — we typically want to perform our effects after React has updated the DOM.
 
- 1. The simplest way is to pass the initial state as a second argument
-  const [state, dispatch] = useReducer(
-    reducer,
-    {count: initialCount}
-  );
+* Placing useEffect inside the component lets us access the count state variable (or any props) right from the effect.
 
-2. You can also create the initial state lazily
-To do this, you can pass an init function as the third argument. The initial state will be set to init(initialArg)
-***
+* By default, it runs both after the first render and after every update. (We will later talk about how to customize this.) Instead of thinking in terms of “mounting” and “updating”, you might find it easier to think that effects happen “after render”.
+
+* Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other.
+
+* The Effect Hook unifies both use cases with a single API.
+
+* Tips for Using Effects :
+
+    * Use Multiple Effects to Separate Concerns
+    * Optimizing Performance by Skipping Effect
