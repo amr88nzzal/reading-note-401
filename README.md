@@ -44,3 +44,4 @@
 | class35    |     [Class-35](https://github.com/amr88nzzal/reading-note-401/blob/main/class35.md) |     [Class-35](https://amr88nzzal.github.io/reading-note-401/class35)
 | class36    |     [Class-36](https://github.com/amr88nzzal/reading-note-401/blob/main/class36.md) |     [Class-36](https://amr88nzzal.github.io/reading-note-401/class36)
 | class37    |     [Class-37](https://github.com/amr88nzzal/reading-note-401/blob/main/class37.md) |     [Class-37](https://amr88nzzal.github.io/reading-note-401/class37)
+| class38    |     [Class-38](https://github.com/amr88nzzal/reading-note-401/blob/main/class38.md) |     [Class-38](https://amr88nzzal.github.io/reading-note-401/class38)
